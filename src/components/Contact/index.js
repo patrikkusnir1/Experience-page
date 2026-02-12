@@ -99,6 +99,7 @@ const Contact = () => {
                 </ul>
               </form>
             </div>
+            
           </div>
           <div className="info-map">
             Patrik Kusnir,

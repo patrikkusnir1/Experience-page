@@ -127,4 +127,15 @@
       transform: translateY(0);
     }
   }
+
+  .path {
+    stroke-dasharray: 30;
+    animation: dash 5s linear;
+  }
+
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 1000;
+    }
+  }
 }

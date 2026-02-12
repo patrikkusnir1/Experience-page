@@ -7,10 +7,9 @@ import Logo from "./Logo"
 import "./index.scss"
 
 
-
-
 const Home = () => {
     const [letterClass, setLetterClass] = useState("text-animate")
+    const [startLogo, setStartLogo] = useState(false);
     const nameArray = ["a", "t", "r", "i", "k", ","];
     const jobArray = ["p", "h", "a", "r", "m", "a", "c", "i", "s", "t"]
 
@@ -18,6 +17,7 @@ const Home = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setLetterClass("text-animate-hover");
+            setStartLogo(true)
         }, 4000);
 
         return () => {
@@ -46,7 +46,7 @@ const Home = () => {
                 <h2>Pharmacist / QA specialist</h2>
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
             </div>
-            <Logo />
+            <Logo start={startLogo} />
         </div>
     );
 }

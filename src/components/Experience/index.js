@@ -6,6 +6,7 @@ import experience from "../../Experience/data/experience"
 import { useEffect } from "react";
 
 
+
 const Experience = () => {
   const [letterClass, setLetterClass] = useState("text-animate");
   console.log(experience);
@@ -56,9 +57,10 @@ const Experience = () => {
       <div className="container experience-page">
         <h1 className="page-title">
           <AnimatedLetters
-              letterClass={letterClass}
-              strArray={"Experience".split("")}
-              idx={15}/>
+            letterClass={letterClass}
+            strArray={'Experience'.split('')}
+            idx={15}
+          />
         </h1>
         {/* render experience content */}
         <div>{renderExperience(experience)}</div>
