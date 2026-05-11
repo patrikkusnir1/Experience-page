@@ -44,6 +44,16 @@ input[type="email"] {
     box-sizing: border-box;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: #b8b8b8
+}
+
+input:focus,
+textarea:focus {
+    outline: 1px solid #ffd700;
+}
+
 textarea {
     width: 100%;
     border: 0;
@@ -58,31 +68,37 @@ textarea {
 
 .flat-button {
     color: #ffd700;
-    background: 0 0;
-    font: 11px;
+    background: transparent;
+    font-size: 11px;
     letter-spacing: 3px;
     text-decoration: none;
     padding: 8px 10px;
     border: 1px solid #ffd700;
     float: right;
     border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: #ffd700;
+        color: #022c43;
+    }
 }
 
 .info-map {
     position: absolute;
-    background-color: #000;
-    top: 80px;
-    right: 30%;
-    z-index: 999999;
-    width: 267px;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    top: 100px;
+    right: 28%;
+    z-index: 999;
+    width: 270px;
+    padding: 22px;
     color: #fff;
     font-family: "Helvetica";
     font-size: 17px;
     font-weight: 300;
-    // opacity: 0;
-    // animation: fadeIn 1s 1.5s;
-    // animation-fill-mode: forwards;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
 
     span {
         font-size: 16px;
@@ -93,17 +109,18 @@ textarea {
 }
 
 .map-wrap {
-        background: rgba(8, 253, 216, 0.1);
-        float: right;
-        width: 53%;
-        height: 100%;
-    }
+    float: right;
+    width: 53%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 10px;
+}
 
 .leaflet-container {
     width: 100%;
     height: 100%;
     position: relative;
-    // opacity: 0;
     animation: backInRight 1s 1.5s;
-    animation-fill-mode: forward;
+    animation-fill-mode: forwards;
 }

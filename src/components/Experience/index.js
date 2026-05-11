@@ -19,7 +19,7 @@ const Experience = () => {
     return () => {
       clearTimeout(timer)
     }
-  })
+  }, [])
 
   const renderExperience = (experience) => {
     return (
@@ -30,7 +30,7 @@ const Experience = () => {
               <div className="logo-wrapper">
                 <img
                   src={exp.cover}
-                  className="experience-image"
+                  className={`experience-image ${idx=== 3 ? "university-logo" : ""}`}
                   alt={exp.name}
                 />
               </div>
@@ -38,7 +38,7 @@ const Experience = () => {
                 <p className="experience-title">{exp.title}</p>
                 <p className="experience-company">{exp.name}</p>
                 <p className="experience-duration">{exp.duration}</p>
-                <h4 className="experience-description">{exp.description}</h4>
+                <p className="experience-description">{exp.description}</p>
                 <button className="btn" onClick={() => window.open(exp.url)}>
                   View company website
                 </button>

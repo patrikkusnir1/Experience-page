@@ -4,9 +4,7 @@ import "./index.scss";
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
-import { MapContainer, TileLayer, useMap } from 'react-leaflet'
-import { Marker } from "react-leaflet";
-import { Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState("text-animate");
@@ -56,13 +54,12 @@ const Contact = () => {
               />
             </h1>
             <p>
-              I am interested in jobs in pharmaceutical industry. However, if
-              you have other request or question, don't hesitate to contact me
-              using below form or use links in the sidebar.
+              I am currently interested in opportunities within the
+              pharmaceutical industry. However, if you have any questions,
+              requests, or collaboration ideas, feel free to contact me using
+              the form below or through the links in the sidebar.
             </p>
-            <p>
-              You can contact me via Telegram or Whatsapp: +7 918 601 59 47
-            </p>
+            <p>You can contact me via Telegram or Whatsapp</p>
             <div className="contact-form">
               <form ref={refForm} onSubmit={sendEmail}>
                 <ul>
@@ -99,14 +96,13 @@ const Contact = () => {
                 </ul>
               </form>
             </div>
-            
           </div>
           <div className="info-map">
             Patrik Kusnir,
             <br />
             Moscow district, Nakhabino
             <br />
-            Russia, <br />
+            Russia <br />
             <span>patrikusnir1@gmail.com</span>
           </div>
           <div className="map-wrap">
