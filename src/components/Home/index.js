@@ -4,6 +4,7 @@ import LogoTitle from "../../assets/images/patrik.png";
 import AnimatedLetters from "../AnimatedLetters"
 import Logo from "./Logo"
 
+
 import "./index.scss"
 
 
@@ -43,7 +44,7 @@ const Home = () => {
                         strArray={jobArray}
                         idx={22} />
                 </h1>
-                <h2>Pharmacist / QA specialist</h2>
+                <h2>Quality Assurance Specialist / Pharmacist</h2>
                 <Link to="/contact" className="flat-button">CONTACT ME</Link>
             </div>
             <Logo start={startLogo} />

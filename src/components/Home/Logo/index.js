@@ -3,16 +3,12 @@ import gsap from 'gsap'
 import './index.scss';
 import {DrawSVGPlugin} from 'gsap/DrawSVGPlugin';
 import Loader from 'react-loaders';
-// import {motion, Variants} from "framer-motion";
+import photo from '../../../assets/images/photo2-removebg.png'
+
 
 gsap.registerPlugin(DrawSVGPlugin)
 
 const Logo = ( {start}) => {
-  // const heading = "Patrik Kusnir";
-  // const headingChars = splitStringsUsingRegex(heading);
-  // const charVariants = {
-  //   hidden: {opacity: 0},
-  //   reveal: {opacity: 1}
   const logoRef = useRef()
   
   useLayoutEffect(() => {
@@ -22,12 +18,19 @@ const Logo = ( {start}) => {
 
     const ctx = gsap.context(()=> {
       gsap.timeline()
+        .from(".photo", {
+          opacity: 0,
+          y: 50,
+          duration: 1.5,
+          ease: "power3.out"
+        })
+
         .from(".outline-path", {
           drawSVG: 0,
           duration: 5,
           stagger: 0.08,
           ease: "power2.out"
-      });
+      }, "-=0.5");
     }, logoRef);
 
     return () => ctx.revert();
@@ -46,7 +49,7 @@ const Logo = ( {start}) => {
           </motion.span>
         )))}
         </motion.h1> */}
-
+        <img src={photo} className="photo" alt="Patrik Kusnir" />
         <svg
           width={800}
           height={500}

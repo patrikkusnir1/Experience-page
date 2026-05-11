@@ -8,49 +8,46 @@ import { useEffect } from "react";
 
 
 const Experience = () => {
-  const [letterClass, setLetterClass] = useState("text-animate");
-  console.log(experience);
+  const [letterClass, setLetterClass] = useState('text-animate')
 
+  
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLetterClass("text-animate-hover")
-    }, 3000);
+      setLetterClass('text-animate-hover')
+    }, 3000)
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer)
     }
-  });
+  })
 
   const renderExperience = (experience) => {
     return (
       <div className="experience-container">
-        {
-          experience.map((exp, idx) => {
-            return (
-              <div className="experience-card" key={idx}>
-                <div className="logo-wrapper">
-                  <img
-                    src={exp.cover}
-                    className="experience-image"
-                    alt={exp.name}
-                  />
-                </div>
-                <div className="experience-content">
-                  <p className="experience-title">{exp.title}</p>
-                  <p className="experience-company">{exp.name}</p>
-                  <p className="experience-duration">{exp.duration}</p>
-                  <h4 className="experience-description">{exp.description}</h4>
-                  <button className="btn" onClick={() => window.open(exp.url)}>
-                    View company website
-                  </button>
-                </div>
+        {experience.map((exp, idx) => {
+          return (
+            <div className="experience-card" key={idx}>
+              <div className="logo-wrapper">
+                <img
+                  src={exp.cover}
+                  className="experience-image"
+                  alt={exp.name}
+                />
               </div>
-            )
-          })
-        }
-      
+              <div className="experience-content">
+                <p className="experience-title">{exp.title}</p>
+                <p className="experience-company">{exp.name}</p>
+                <p className="experience-duration">{exp.duration}</p>
+                <h4 className="experience-description">{exp.description}</h4>
+                <button className="btn" onClick={() => window.open(exp.url)}>
+                  View company website
+                </button>
+              </div>
+            </div>
+          )
+        })}
       </div>
-    );
+    )
   }
   return (
     <>
@@ -67,7 +64,7 @@ const Experience = () => {
       </div>
       <Loader type="pacman" />
     </>
-  ) 
+  )
 }
 
 export default Experience
