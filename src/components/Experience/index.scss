@@ -113,3 +113,30 @@
 
     }
   }
+
+  @media screen and (max-width: 1200px) {
+    .experience-container {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+
+      h1.page-title {
+        margin-left: 20px;
+        margin-top: 20px;
+      }
+
+      .experience-card {
+        height: 200px;
+        max-width: calc(50% - 10px);
+      }
+
+      .experience-content {
+        display: block;
+        width: 100%;
+      }
+
+      .experience-image {
+        
+      }
+    }
+  }
