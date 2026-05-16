@@ -49,7 +49,7 @@ const Home = () => {
             />
           </h1>
           <h2>Quality Assurance Specialist / Pharmacist</h2>
-          <Link to="/contact" className="flat-button">
+          <Link to="contact" className="flat-button">
             CONTACT ME
           </Link>
         </div>
