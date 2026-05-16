@@ -86,3 +86,108 @@
     height: 120px;  /* matches fontSize 80 */
     // background-color: black;  /* for debugging */
 }
+
+@media screen and (max-width: 1200px) {
+    .tags,
+    .home-page h1::before,
+    .home-page h1::after {
+        display: none;
+    }
+
+    .home-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        box-sizing: border-box;
+        min-height: 100vh;
+
+
+        .text-zone {
+            position: relative;
+            left: auto;
+            top: auto;
+            transform: none;
+            width: 100%;
+            max-width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 42px;
+            line-height: 45px;
+        }
+
+        h2 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            line-height: 22px;
+        }
+
+        .flat-button {
+            float: none;
+            display: block;
+            margin: 25px auto 0;
+            width: fit-content;
+        }
+
+        .logo-container {
+            position: relative;
+            top: auto;
+            right: auto;
+            left: auto;
+            bottom: auto;
+            transform: none;
+            width: 100%;
+            max-width: 400px;
+            height: 320px;
+            margin-top: -10px;
+        }
+    }
+    .photo {
+        width: 240px;
+        // height: auto;
+        bottom: 100px;
+    }
+
+
+    .logo-container svg {
+        width: 420px;
+        height: 220px;
+        top: 200px;
+        left: 0;
+        transform: translateY(-50%);
+        bottom: 15px;
+    }
+
+    #vara-container {
+        width: 420px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-page h1 {
+    font-size: 42px;
+    line-height: 42px;
+    }
+
+    .home-page h2 {
+    max-width: 260px;
+    margin: 20px auto 0;
+    line-height: 22px;
+    color: #a8a8a8;
+}
+
+    .logo-container svg {
+    width: 260px;
+    }
+
+
+    .logo-container {
+    height: 200px;
+    }
+}
+

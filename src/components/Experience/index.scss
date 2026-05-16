@@ -1,3 +1,12 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
 .experience-page {
   padding-left: 120px;
   padding-right: 60px;
@@ -31,11 +40,11 @@
     transition: transform 0.3s ease, border-color 0.3s ease;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   }
+
   .experience-card:hover {
     transform: translateY(-5px);
     border-color: rgba(255, 215, 0, 0.6);
-
-    }
+  }
 
   .logo-wrapper {
     width: 180px;
@@ -104,39 +113,78 @@
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-
   }
 
-    .btn:hover {
-      color: #022c43;
-      background: #ffd700;
-
-    }
+  .btn:hover {
+    color: #022c43;
+    background: #ffd700;
   }
+}
 
   @media screen and (max-width: 1200px) {
-    .experience-container {
-      width: 100%;
-      padding: 20px;
-      box-sizing: border-box;
+    .experience-page {
+      padding-left: 20px;
+      padding-right: 20px;
+      overflow-x: hidden;
 
       h1.page-title {
-        margin-left: 20px;
-        margin-top: 20px;
+        margin-left: 0;
+        margin-top: 30px;
+        margin-bottom: 24px;
       }
 
+      .experience-container {
+        gap: 16px;
+        padding-bottom: 60px;
+        max-width: 100%;
+    }
+
       .experience-card {
-        height: 200px;
-        max-width: calc(50% - 10px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 16px;
+        min-height: unset;
+        max-width: 100%;
+      }
+
+      .logo-wrapper {
+        width: 120px;
+        height: 120px;
       }
 
       .experience-content {
-        display: block;
         width: 100%;
       }
 
-      .experience-image {
-        
+      .experience-title {
+        font-size: 18px;
+        // text-align: center;
       }
+
+      .experience-company {
+        font-size: 14px;
+        // text-align: center;
+      }
+
+      .experience-duration {
+        font-size: 13px;
+        // text-align: center;
+      }
+
+      .experience-description {
+        font-size: 14px;
+        max-width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+        font-size: 13px;
+      }
+
+      // .experience-image {
+        
+      // }
     }
   }

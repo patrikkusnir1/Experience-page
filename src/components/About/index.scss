@@ -79,3 +79,20 @@ animation-name: spincube;
     transform: rotateX(90deg);
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .stage-cube-cont {
+    position: initial;
+    width: 100%;
+    height: 0%;
+    overflow: visible;
+    padding-top: 5px;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  .text-zone {
+    font-size: 14px;
+    padding-bottom: 25px;
+  }
+}
