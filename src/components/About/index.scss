@@ -10,13 +10,14 @@ overflow: hidden;
 }
 
 .cube-spinner {
-animation-name: spincube;
+  animation-name: spincube;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-duration: 12s;
   transform-style: preserve-3d;
   transform-origin: 100px 100px 0;
   margin-left: calc(50% - 100px);
+  animation-fill-mode: forwards;
 
     div {
     position: absolute;
@@ -78,17 +79,42 @@ animation-name: spincube;
   83% {
     transform: rotateX(90deg);
   }
+
+  100% {
+    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .stage-cube-cont {
     position: initial;
     width: 100%;
-    height: 0%;
+    height: 150px;
     overflow: visible;
     padding-top: 5px;
     margin: 0 auto;
-    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cube-spinner {
+    animation-iteration-count: 1;
+    animation-duration: 8s;
+    transform-origin: 60px 60px 0;
+    margin-left: 0;
+
+    div {
+      width: 120px;
+      height: 120px;
+      font-size: 60px;
+    }
+
+    .face1 {transform: translateZ(60px);}
+    .face2 {transform: rotateY(90deg) translateZ(60px);}
+    .face3 {transform: rotateY(90deg) rotateX(90deg) translateZ(60px);}
+    .face4 {transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);}
+    .face5 {transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);}
+    .face6 {transform: rotateX(-90deg) translateZ(60px);}
   }
 
   .text-zone {
