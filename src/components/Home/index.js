@@ -52,6 +52,13 @@ const Home = () => {
           <Link to="contact" className="flat-button">
             CONTACT ME
           </Link>
+          <a
+            href={`${process.env.PUBLIC_URL}/cv.pdf`}
+            download="Patrik_Kusnir_CV.pdf"
+            className="flat-button"
+          >
+            DOWNLOAD CV
+          </a>
         </div>
         <Logo start={startLogo} />
       </div>

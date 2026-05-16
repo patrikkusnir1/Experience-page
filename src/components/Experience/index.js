@@ -30,7 +30,9 @@ const Experience = () => {
               <div className="logo-wrapper">
                 <img
                   src={exp.cover}
-                  className={`experience-image ${idx=== 3 ? "university-logo" : ""}`}
+                  className={`experience-image ${
+                    idx === 3 ? 'university-logo' : ''
+                  }`}
                   alt={exp.name}
                 />
               </div>
@@ -39,9 +41,21 @@ const Experience = () => {
                 <p className="experience-company">{exp.name}</p>
                 <p className="experience-duration">{exp.duration}</p>
                 <p className="experience-description">{exp.description}</p>
-                <button className="btn" onClick={() => window.open(exp.url)}>
-                  View company website
-                </button>
+                <div className="btn-group">
+                  <button className="btn" onClick={() => window.open(exp.url)}>
+                    View company website
+                  </button>
+
+                  {exp.recommendation && (
+                    <a
+                      href={`${process.env.PUBLIC_URL}${exp.recommendation}`}
+                      download
+                      className="btn flat-btn"
+                    >
+                      Download recommendation letter
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           )

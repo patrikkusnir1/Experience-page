@@ -114,6 +114,7 @@
 @media screen and (max-width: 1200px) {
     .page {
         position: initial;
+        min-height: 100vh;
     }
 
     .container {
@@ -123,7 +124,8 @@
 
         &.about-page,
         &.contact-page,
-        &.portfolio-page
+        &.portfolio-page,
+        &.experience-page
          {
             .text-zone {
                 position: initial;

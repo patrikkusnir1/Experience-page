@@ -21,6 +21,7 @@ const experience = [
       'I wrote scientific articles about iron citrate supplements in English and published them in European scientific journals. I also provided basic patient consultations and advisory support. In addition, I translated scientific articles from English to Russian and vice versa, and supported my non-medical colleagues with professional expertise and medical guidance.',
     duration: 'Oct 2023 - Jan 2024',
     url: 'https://synthesit-world.com/',
+    recommendation: "/recommendations/Synthesit_recommendation.pdf"
   },
   {
     cover: jti,
@@ -30,6 +31,7 @@ const experience = [
       'I searched scientific databases and literature to collect toxicological, classification, and labeling information related to components used or intended to be used in JTI products. I reviewed scientific articles, technical documentation, and reports, and assessed the relevance of published toxicological data. I prepared and continuously updated toxicological documentation related to ingredient toxicity for tobacco products. I also supported the annual classification and labeling of ingredients across the product portfolio to ensure successful chemical registration.',
     duration: 'June 2021 - Oct 2022',
     url: 'https://www.jti.com/en',
+    recommendation: "/recommendations/JTI_recommendation.pdf"
   },
   {
     cover: jlfuk,

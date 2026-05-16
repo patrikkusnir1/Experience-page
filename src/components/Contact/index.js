@@ -53,6 +53,7 @@ const Contact = () => {
                 idx={15}
               />
             </h1>
+
             <p>
               I am currently interested in opportunities within the
               pharmaceutical industry. However, if you have any questions,
@@ -60,6 +61,7 @@ const Contact = () => {
               the form below or through the links in the sidebar.
             </p>
             <p>You can contact me via Telegram or Whatsapp</p>
+
             <div className="contact-form">
               <form ref={refForm} onSubmit={sendEmail}>
                 <ul>

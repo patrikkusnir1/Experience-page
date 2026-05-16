@@ -119,6 +119,25 @@ body {
     color: #022c43;
     background: #ffd700;
   }
+
+  .experience-content a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  height: 38px;
+  // margin-left: 20px;
+  font-size: 13px;
+  // margin-top: -10px;
+  white-space: nowrap;
+}
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
 }
 
   @media screen and (max-width: 1200px) {
@@ -183,8 +202,8 @@ body {
         font-size: 13px;
       }
 
-      // .experience-image {
-        
+      // .experience-content a.btn {
+      //   margin-left: 10px;
       // }
     }
   }
