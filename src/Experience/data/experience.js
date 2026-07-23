@@ -7,7 +7,7 @@ const experience = [
   {
     cover: krka,
     name: 'KRKA-RUS, Istra, Russia',
-    title: 'Quality Assessment specialist',
+    title: 'Quality Assurance specialist',
     description:
       'Currently I am responsible for the change control quality system across the company, as well as the validation and qualification of laboratory instruments and manufacturing equipment. I also review and approve microbiological method verification protocols and verify that deviation logs and records related to climatic parameters are properly maintained by the engineering department.',
     duration: 'Oct 2024 - Present',
